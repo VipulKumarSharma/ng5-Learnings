@@ -1,0 +1,31 @@
+<label>Event Binding</label>
+<input type="text" class="form-control"
+    (input)="onUpdateServerName($event)">
+
+<label>2 Way Binding</label>
+<input type="text" class="form-control"
+    [(ngModel)]="serverName">
+
+<label>String Interpolation</label>
+<p>Angular variable value : {{ serverName }}</p>
+
+<label>Property & Event Binding</label>
+<br>
+<button type="button" class="btn btn-sm btn-primary" 
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+    >Add Server
+</button>
+
+<br>
+<label>Property Binding</label>
+<p [innerText]="serverCreationStatus"></p>
+
+
+<label>Structural Directive</label>
+<p *ngIf="serverCreated; else noServerText">Server was Created with name : {{ serverName }}</p>
+<ng-template #noServerText>
+    <p>No Server was Created !</p>
+</ng-template>
+
+<app-server *ngFor="let server of servers"></app-server>
