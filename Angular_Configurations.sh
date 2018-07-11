@@ -84,10 +84,45 @@ Angular Setup ::
 		})
 		export class HeaderComponent {}
 		
-15. You can download the Angular 6 release candidate from GitHub or via the terminal command 
+	
+	
+------------------------------------------------------------------------------------------------------
+Update NodeJS :: 
+------------------------------------------------------------------------------------------------------
+Download latest installer & run.
+
+
+------------------------------------------------------------------------------------------------------
+Update NPM :: 
+------------------------------------------------------------------------------------------------------
+1.	Run PowerShell as Administrator
+
+	> Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+	> npm install -g npm-windows-upgrade
+	> npm-windows-upgrade
+	
+
+------------------------------------------------------------------------------------------------------
+Update Angular CLI :: 
+------------------------------------------------------------------------------------------------------
+	> npm uninstall -g angular-cli
+	> npm cache verify 						(if npm > 5)
+	> npm install -g @angular/cli@latest
+	
+	Use -f to force the command
+	> npm cache clean -f
+	
+	You can download the Angular 6 release candidate from GitHub or via the terminal command 
 	> npm install -g @angular/cli@next 
-    then create a project with 
-    	> ng new
-    or use the command 
-	> ng update –next 
-    to update a project.
+   
+    
+------------------------------------------------------------------------------------------------------
+Update Angular Inside Local Project :: 
+------------------------------------------------------------------------------------------------------
+	> rm -rf node_modules
+	> npm uninstall --save-dev angular-cli
+	> npm install --save-dev @angular/cli@latest
+	> npm install
+	
+	Use below command to update a project.
+	> ng update –next
