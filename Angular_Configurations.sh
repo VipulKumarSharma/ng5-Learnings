@@ -35,7 +35,7 @@ Angular Setup ::
 		> ng generate module <module_name>
 		> ng generate component <comp_name>
 
-9.	platformBrowserDynamic() used for bootstraping;
+9.  platformBrowserDynamic() used for bootstraping;
 
 10. To install Bootstrap 3 into angular project, use below command : 
 		> npm install --save bootstrap@3
@@ -84,4 +84,10 @@ Angular Setup ::
 		})
 		export class HeaderComponent {}
 		
-		
+15. You can download the Angular 6 release candidate from GitHub or via the terminal command 
+	> npm install -g @angular/cli@next 
+    then create a project with 
+    	> ng new
+    or use the command 
+	> ng update –next 
+    to update a project.
